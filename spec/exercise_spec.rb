@@ -21,7 +21,7 @@ describe String do
       subject.each_line.should be_kind_of(Enumerator)
       subject.each_line.to_a.should be_kind_of(Array)
 
-      subject.each_line.to_a.length.should == 4
+      subject.each_line.to_a.length.should == 3
     end
     
   end
@@ -44,7 +44,7 @@ describe Integer do
   # 
   # @see https://www.relishapp.com/rspec/rspec-core/docs/subject/implicit-receiver
   # 
-  its(:succ) { should == 2 }
+  its(:succ) { should == 3 }
   
 end
 
@@ -56,6 +56,6 @@ describe Symbol do
   
   subject { :alphabet }
   
-  its(:capitalize) { should == :Alphabet }
+  its(:capitalize) { should == "Alphabet" }
   
 end
